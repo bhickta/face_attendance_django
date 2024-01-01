@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block scripts %}
+<script src="{% static 'js/login.js' %}"></script>
+{% endblock scripts %}
+
+{% block content %}
+<div class="text-center">
+    <video autoplay="true" id="video-element"></video>
+</div>
+<div id="img-element"></div>
+<div class="text-center mt-3">
+    <div>
+        <button type="button" id="buttonStart">Start</button>
+        <button type="button" id="buttonStop" disabled>Stop</button>
+    </div>
+    <div>
+        <video autoplay muted playsinline id="videoLive"></video>
+    </div>
+    <div>
+        <video controls playsinline id="videoRecorded"></video>
+    </div>
+</div>
+{% endblock content %}
